@@ -6,7 +6,7 @@ function displayMenuItems(menuItems) {
     const div = document.createElement('div');
     const title = document.createElement('h2');
     const titleText = document.createTextNode(dish.title);
-    title.appendChild(titleText);
+    title.appendChild(titleText); // stck text into h2
     div.appendChild(title); // stick h2 into the div
     const description = document.createElement('p'); // create p
     const descriptionText = document.createTextNode(dish.description); //create the text for inside 
@@ -14,8 +14,8 @@ function displayMenuItems(menuItems) {
     div.appendChild(description);
     menuSection.appendChild(div);
 
-  })
-}
+  });
+};
 
 async function getMenuItems() {
   const response = await fetch('https://codice-boca.web.app/menu');
